@@ -3,12 +3,11 @@
 /**
  * Contao Open Source CMS
  *
- * Copyright (C) 2005-2013 Leo Feyer
+ * Copyright (c) 2005-2014 Leo Feyer
  *
- * @package   LazyImage
- * @author    Arne Stappen
- * @license   GNU/LGPL
- * @copyright A. Stappen (2013)
+ * @package Inserttag_download
+ * @link    https://contao.org
+ * @license http://www.gnu.org/licenses/lgpl-3.0.html LGPL
  */
 
 
@@ -20,10 +19,13 @@ ClassLoader::addNamespaces(array
 	'HeimrichHannot',
 ));
 
+
 /**
  * Register the classes
  */
 ClassLoader::addClasses(array
 (
+	// Classes
+	'ContentDownloadInserttag'         => 'system/modules/inserttag_download/classes/ContentDownloadInserttag.php',
 	'HeimrichHannot\InserttagDownload' => 'system/modules/inserttag_download/classes/InserttagDownload.php',
 ));
