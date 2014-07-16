@@ -29,6 +29,8 @@ class InserttagDownload extends \Frontend
 				$objDownload->singleSRC = $singleSRC;
 				
 				$objDownload->linkTitle = $params[2];
+                $objDownload->cssID[1] = $params[3];
+                $objDownload->cssID[0] = $params[4];
 				$objContentDownload = new \ContentDownloadInserttag($objDownload);
 				
 				$output = $objContentDownload->generate();
