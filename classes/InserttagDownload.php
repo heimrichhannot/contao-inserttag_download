@@ -44,7 +44,12 @@ class InserttagDownload extends \Frontend
 				{
 					return $objContentDownload->Template->href;
 				}
-				
+
+                if($params[0] == 'download_size')
+                {
+                    return $objContentDownload->Template->filesize;
+                }
+
 				return '';
 			}
 		}
