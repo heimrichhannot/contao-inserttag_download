@@ -9,6 +9,7 @@ class ContentDownloadInserttag extends \ContentDownload
 		$this->singleSRC = $objElement->singleSRC;
 		$this->linkTitle = $objElement->linkTitle;
         $this->cssID = $objElement->cssID;
+		$this->id = $objElement->singleSRC;
 	}
 	
 	
