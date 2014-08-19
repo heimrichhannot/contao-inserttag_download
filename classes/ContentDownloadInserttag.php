@@ -2,6 +2,7 @@
 
 class ContentDownloadInserttag extends \ContentDownload
 {
+	protected $strTemplate = 'ce_download_inserttag';
 	
 	public function __construct($objElement=null)
 	{

@@ -10,8 +10,6 @@ class InserttagDownload extends \Frontend
 
 	protected $linkTitle;
 
-	protected $strTemplate = 'ce_download';
-
 	protected $strHref;
 
 	public function getDownloadElement($strTag)
@@ -27,12 +25,11 @@ class InserttagDownload extends \Frontend
 				$objDownload = new \stdClass();
 				
 				$objDownload->singleSRC = $singleSRC;
-				
-				$objDownload->linkTitle = $params[2];
-                $objDownload->cssID[1] = 'inserttag_download ' . $params[3];
-                $objDownload->cssID[0] = $params[4];
+
+				$objDownload->linkTitle = strip_tags($params[2]); // remove <span> etc
+                $objDownload->cssID[1] = 'inserttag_download ' . strip_tags($params[3]);
+                $objDownload->cssID[0] = strip_tags($params[4]);
 				$objContentDownload = new \ContentDownloadInserttag($objDownload);
-				
 				$output = $objContentDownload->generate();
 				
 				if($params[0] == 'download')

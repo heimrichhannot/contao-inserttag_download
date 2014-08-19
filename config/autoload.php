@@ -26,6 +26,16 @@ ClassLoader::addNamespaces(array
 ClassLoader::addClasses(array
 (
 	// Classes
-	'ContentDownloadInserttag'         => 'system/modules/inserttag_download/classes/ContentDownloadInserttag.php',
 	'HeimrichHannot\InserttagDownload' => 'system/modules/inserttag_download/classes/InserttagDownload.php',
+	'ContentDownloadInserttag'         => 'system/modules/inserttag_download/classes/ContentDownloadInserttag.php',
+));
+
+
+/**
+ * Register the templates
+ */
+TemplateLoader::addFiles(array
+(
+	'ce_download_inserttag'   => 'system/modules/inserttag_download/templates/elements',
+	'block_searchable_inline' => 'system/modules/inserttag_download/templates/blocks',
 ));
