@@ -38,7 +38,7 @@ class InserttagDownload extends \Frontend
 					return $output;
 				}
 				
-				if($params[0] == 'download_link')
+				if($params[0] == 'download_link' || $params[0] == 'download_url')
 				{
 					return $objContentDownload->Template->href;
 				}
