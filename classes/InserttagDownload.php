@@ -2,6 +2,8 @@
 
 namespace HeimrichHannot;
 
+use Contao\FilesModel;
+
 class InserttagDownload extends \Frontend
 {
 	protected $singleSRC;
@@ -23,7 +25,15 @@ class InserttagDownload extends \Frontend
 				$singleSRC = strip_tags(($params[1])); // remove <span> etc, otherwise Validator::isuuid fail
 				
 				$objDownload = new \stdClass();
-				
+
+				if (strpos($singleSRC, '/') !== false)
+				{
+					if (($objFile = FilesModel::findByPath($singleSRC)) !== null && $objFile->uuid)
+					{
+						$singleSRC = \StringUtil::binToUuid($objFile->uuid);
+					}
+				}
+
 				$objDownload->singleSRC = $singleSRC;
 
 				$objDownload->linkTitle = strip_tags($params[2]); // remove <span> etc
