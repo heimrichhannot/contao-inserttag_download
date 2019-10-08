@@ -2,6 +2,8 @@
 
 Contao download inserttag, to provide downloadable files inside paragraphs, etc. 
 
+> This repository is not maintained anymore. For Contao 4 users, please use our [Inserttags Collection Bundle](https://github.com/heimrichhannot/contao-inserttagcollection-bundle) instead.
+
 ## Usage & Examples
 
 '''
